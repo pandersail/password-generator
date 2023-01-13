@@ -96,6 +96,7 @@ let oddCharacters = false
 let passwordLength = 0
 let randomPassword = []
 let randomNumbers = []
+let allArrays = []
 
 
 // Function to prompt user for password options
@@ -148,10 +149,12 @@ function getRandom(arr) {
                      lowerCasedCharacters.sort(() => Math.random() - 0.5);
                      upperCasedCharacters.sort(() => Math.random() - 0.5);
 
+    allArrays = specialCharacters.concat(randomNumbers, lowerCasedCharacters, upperCasedCharacters);
+
       
-    randomPassword = 
+    randomPassword = allArrays.sort(() => Math.random() - 0.5);
   
-    console.log(randomNumbers)
+    console.log(randomPassword)
 
 }
 
