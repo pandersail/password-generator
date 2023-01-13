@@ -102,21 +102,44 @@ let passwordLength = 0
 /* */
 // Function to prompt user for password options
 function getPasswordOptions() {
+
+alert("Welcome to web's safest password generator, 30X Keys – powered by silicone micro-brain technology.")
+//Welcome alert
+
   i = 0
   while (i < 1) {
+// while loop to include break property in case of non-accepted input
+   
   passwordLength = prompt("How many characters-long do you want your password to be?")
 
-  if (passwordLength < 10 || passwordLength > 64) {
+// convert input to integer
+  passwordLength = parseInt(passwordLength)
+
+  if (passwordLength < 10 || passwordLength > 64 || passwordLength % 1 !== 0) {
     alert("You have to choose a number between 10 and 64. Please reload the page to start again.")
     break;
   };
+// Conditions for passwordLength to be accepted, otherwise break if length or type of input incorrect (not int)
+ 
+
   lowerCaseCharacters = confirm("Do you want include lower-case characters in your password?")
   upperCaseCharacters = confirm("Do you want include upper-case characters in your password?")
   numberCharacters = confirm("Do you want include numbers in your password?")
   oddCharacters = confirm("Do you want include special characters in your password?")
-  i++
-  } 
+// Type of characters confirm notifications
+
+  if (lowerCaseCharacters === false &&
+      upperCaseCharacters === false &&
+      numberCharacters === false &&
+      oddCharacters === false) {
+        alert("You have to choose at least one type of character to make-up the password. Please reload the page to start again.")
+        break;
+      };
+// Non-accepted conditions for type of characters where it breaks to start again
+  i++ 
+  }
 }
+
 
 
 // Function for getting a random element from an array
@@ -128,18 +151,13 @@ function getRandom(arr) {
 function generatePassword() {
 
 }
-alert("Welcome to web's safest password generator, 30X Keys – powered by silicone micro-brain technology.")
 
-getPasswordOptions()
 
-/*
-I want an welcoming alert to pop up.
-I want a prompt alert to pop up asking how long they want the password to be (mentioning min 10, max 64)
-I want to store the length in the prompt variable 
-If the value is 10> I want to while-loop and ask again
-If the value is 64< I want to while-loop and ask again
 
-If the value is correct, prompt if password should contain:
+
+//getPasswordOptions()
+
+/*If the value is correct, prompt if password should contain:
 - Lowercase characters
 - Uppercase characters
 - Numeric
@@ -148,8 +166,7 @@ If none are selected from the above list alert at least one type should be selec
 
 If at least one is selected:
 Select relevant arrays to math.random to the length of the value inputted
-Print the password on the screen
-*/
+Print the password on the screen*/
 
 
 
@@ -158,17 +175,26 @@ Print the password on the screen
 
 // No need to edit past below
 // Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
+let conditionsBtn = document.querySelector('#conditions')
+let generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
+function generateConditions() {
+  let conditions = getPasswordOptions()
+  let conditionsText = document.querySelector('#conditions');
+
+  conditionsText = conditions;
+}
+
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
+  let password = generatePassword();
+  let passwordText = document.querySelector('#password');
 
   passwordText.value = password;
 }
 
 // Add event listener to generate button
+conditionsBtn.addEventListener('click', generateConditions);
 generateBtn.addEventListener('click', writePassword);
 
 /*Yes, the given pseudo-code is a good outline for a password generator. However, 
