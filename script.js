@@ -94,6 +94,8 @@ let upperCaseCharacters = false
 let numberCharacters = false
 let oddCharacters = false
 let passwordLength = 0
+let randomPassword = []
+let randomNumbers = []
 
 
 // Function to prompt user for password options
@@ -141,6 +143,16 @@ alert("Welcome to web's safest password generator, 30X Keys – powered by silic
 // Function for getting a random element from an array
 function getRandom(arr) {
 
+                     specialCharacters.sort(() => Math.random() - 0.5);
+                     randomNumbers = numericCharacters.sort(() => Math.random() - 0.5);
+                     lowerCasedCharacters.sort(() => Math.random() - 0.5);
+                     upperCasedCharacters.sort(() => Math.random() - 0.5);
+
+      
+    randomPassword = 
+  
+    console.log(randomNumbers)
+
 }
 
 // Function to generate password with user input
@@ -151,13 +163,7 @@ function generatePassword() {
 
 
 
-/* If the value is correct, prompt if password should contain:
-- Lowercase characters
-- Uppercase characters
-- Numeric
-- Special characters
-If none are selected from the above list alert at least one type should be selected and restart
-
+/*
 If at least one is selected:
 Select relevant arrays to math.random to the length of the value inputted
 Print the password on the screen*/
@@ -166,7 +172,7 @@ Print the password on the screen*/
 
 
 
-
+getRandom()
 
 // Get references to the #generate element
 let conditionsBtn = document.querySelector('#conditions')
@@ -193,6 +199,12 @@ function writePassword() {
 // Add event listener to generate button
 conditionsBtn.addEventListener('click', generateConditions);
 generateBtn.addEventListener('click', writePassword);
+
+
+
+
+
+
 
 /*Yes, the given pseudo-code is a good outline for a password generator. However, 
 there are a couple of things that can be improved:
