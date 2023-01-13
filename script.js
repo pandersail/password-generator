@@ -88,6 +88,7 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// Declaring variables
 let lowerCaseCharacters = false
 let upperCaseCharacters = false
 let numberCharacters = false
@@ -95,16 +96,11 @@ let oddCharacters = false
 let passwordLength = 0
 
 
-
-
-
-
-/* */
 // Function to prompt user for password options
 function getPasswordOptions() {
 
-alert("Welcome to web's safest password generator, 30X Keys – powered by silicone micro-brain technology.")
-//Welcome alert
+alert("Welcome to web's safest password generator, 30X Keys – powered by silicone micro-chip technology.")
+// Welcome alert
 
   i = 0
   while (i < 1) {
@@ -155,9 +151,7 @@ function generatePassword() {
 
 
 
-//getPasswordOptions()
-
-/*If the value is correct, prompt if password should contain:
+/* If the value is correct, prompt if password should contain:
 - Lowercase characters
 - Uppercase characters
 - Numeric
@@ -173,9 +167,11 @@ Print the password on the screen*/
 
 
 
-// No need to edit past below
+
 // Get references to the #generate element
 let conditionsBtn = document.querySelector('#conditions')
+// Reference to #condition element
+
 let generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
@@ -185,6 +181,7 @@ function generateConditions() {
 
   conditionsText = conditions;
 }
+// add button for conditions, eliminating the first automatic alert when visiting page
 
 function writePassword() {
   let password = generatePassword();
