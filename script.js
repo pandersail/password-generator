@@ -103,20 +103,19 @@ let passwordLength = 0
 // Function to prompt user for password options
 function getPasswordOptions() {
   i = 0
-  while (i < 5) {
+  while (i < 1) {
   passwordLength = prompt("How many characters-long do you want your password to be?")
 
   if (passwordLength < 10 || passwordLength > 64) {
-    alert("You have to choose a number between 10 and 64. Please start again.")
+    alert("You have to choose a number between 10 and 64. Please reload the page to start again.")
     break;
   };
   lowerCaseCharacters = confirm("Do you want include lower-case characters in your password?")
   upperCaseCharacters = confirm("Do you want include upper-case characters in your password?")
   numberCharacters = confirm("Do you want include numbers in your password?")
   oddCharacters = confirm("Do you want include special characters in your password?")
-
-  }
-
+  i++
+  } 
 }
 
 
