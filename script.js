@@ -102,7 +102,7 @@ let numbers = {};
 
 
 
-alert("Welcome to web's safest password generator, 30X Keys – powered by silicone micro-chip technology.")
+alert("Welcome to web's safest password generator")
 // Welcome alert
 
 // Function to prompt user for password options
@@ -112,14 +112,6 @@ function getPasswordOptions() {
   while (i < 1) {
 // while loop to include break property in case of non-accepted input
    
-  /* passwordLength = prompt("How many characters-long do you want your password to be?")
-
-  if (passwordLength < 10 || passwordLength > 64 || passwordLength % 1 !== 0) {
-    alert("You have to choose a number between 10 and 64. Please reload the page to start again.")
-    break;
-  };
-Conditions for passwordLength to be accepted, otherwise break if length or type of input incorrect (not int) // Moved to second function */
-
 // convert input to integer
     passwordLength = parseInt(passwordLength)
  
