@@ -112,13 +112,13 @@ function getPasswordOptions() {
   while (i < 1) {
 // while loop to include break property in case of non-accepted input
    
-  // passwordLength = prompt("How many characters-long do you want your password to be?")
+  /* passwordLength = prompt("How many characters-long do you want your password to be?")
 
-  // if (passwordLength < 10 || passwordLength > 64 || passwordLength % 1 !== 0) {
-  //   alert("You have to choose a number between 10 and 64. Please reload the page to start again.")
-  //   break;
-  // };
-// Conditions for passwordLength to be accepted, otherwise break if length or type of input incorrect (not int)
+  if (passwordLength < 10 || passwordLength > 64 || passwordLength % 1 !== 0) {
+    alert("You have to choose a number between 10 and 64. Please reload the page to start again.")
+    break;
+  };
+Conditions for passwordLength to be accepted, otherwise break if length or type of input incorrect (not int) // Moved to second function */
 
 // convert input to integer
     passwordLength = parseInt(passwordLength)
@@ -140,39 +140,36 @@ function getPasswordOptions() {
 // Non-accepted conditions for type of characters where it breaks to start again
   i++ 
   }
-  
-  //return passwordLength
 }
 
-//let myPasswordLength = getPasswordOptions
-//console.log(myPasswordLength)
 
 // Function for getting a random element from an array
 function getRandom(arr) {
   i = 0
   while (i < 1) {
-
+//randomizes arrays
                      specialCharacters.sort(() => Math.random() - 0.5);
                      randomNumbers = numericCharacters.sort(() => Math.random() - 0.5);
                      lowerCasedCharacters.sort(() => Math.random() - 0.5);
                      upperCasedCharacters.sort(() => Math.random() - 0.5);
 
+//brings all arrays together in one array
     allArrays = specialCharacters.concat(randomNumbers, lowerCasedCharacters, upperCasedCharacters);
 
+    // password length query, only accepts between 10 and 64 and integers
     passwordLength = prompt("How many characters-long do you want your password to be?")
 
-    //test
   if (passwordLength < 10 || passwordLength > 64 || passwordLength % 1 !== 0) {
     alert("You have to choose a number between 10 and 64. Please reload the page to start again.")
     break;
-  };//
+  };
 
+// randomizes the array
     randomArray = allArrays.sort(() => Math.random() - 0.5);
 
-    randomPassword = randomArray.slice(0,passwordLength) // !!!!need to figure how to replace by passwordLength
+//sets array length based on passwordLength input
 
-    console.log(randomPassword)
-    //return randomPassword
+    randomPassword = randomArray.slice(0,passwordLength) 
       
 i++
   }
@@ -186,16 +183,6 @@ function generatePassword() {
     return finalPassword
 
 }
-
-
-// Select relevant arrays to math.random to the length of the value inputted
-// Print the password on the screen*/
-
-
-
-
-//getPasswordOptions()
-//getRandom()
 
 
 let conditionsBtn = document.querySelector('#conditions')
