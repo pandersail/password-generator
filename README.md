@@ -75,5 +75,7 @@ If you have any feedback, please reach out to us at papayas-stamper-0z@icloud.co
 
 ## License
 
+Copyright (c) Angelo Silva. All rights reserved
+
 [MIT](https://choosealicense.com/licenses/mit/)
 
