@@ -44,6 +44,7 @@ You can read on why it is critical to have strong and safe passwords [here.](htt
 
 
 ## 🔗 Links
+
 [GitHub](https://github.com/pandersail)
 
 [linkedin](https://www.linkedin.com/in/angeloantosilva/)
@@ -53,7 +54,10 @@ You can read on why it is critical to have strong and safe passwords [here.](htt
 
 
 ## Snippet
+
 ![code](./images/carbon.png)
+
+Code snippet.
 
 
 
