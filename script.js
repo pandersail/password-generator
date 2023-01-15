@@ -96,7 +96,7 @@ let oddCharacters = false
 let passwordLength = 0
 let randomArray = []
 let randomNumbers = []
-let allArrays = []
+
 let randomPassword = []
 let numbers = {};
 
@@ -112,6 +112,13 @@ function getPasswordOptions() {
   while (i < 1) {
 // while loop to include break property in case of non-accepted input
    
+passwordLength = prompt("How many characters-long do you want your password to be?")
+
+if (passwordLength < 10 || passwordLength > 64 || passwordLength % 1 !== 0) {
+  alert("You have to choose a number between 10 and 64. Please reload the page to start again.")
+  break;
+};
+
 // convert input to integer
     passwordLength = parseInt(passwordLength)
  
@@ -137,6 +144,7 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
+  let allArrays = []; //included allArrays locally (instead of globally) so we don't have to reload the page to generate another password
   i = 0
   while (i < 1) {
 //randomizes arrays
@@ -144,17 +152,24 @@ function getRandom(arr) {
                      randomNumbers = numericCharacters.sort(() => Math.random() - 0.5);
                      lowerCasedCharacters.sort(() => Math.random() - 0.5);
                      upperCasedCharacters.sort(() => Math.random() - 0.5);
+console.log(oddCharacters, numberCharacters, lowerCaseCharacters, upperCaseCharacters);
 
-//brings all arrays together in one array
-    allArrays = specialCharacters.concat(randomNumbers, lowerCasedCharacters, upperCasedCharacters);
+// checking user's input if true will utilise the above math.random arrays + brings all arrays together in one array if true
+if (lowerCaseCharacters === true) {
+  allArrays = allArrays.concat(lowerCasedCharacters);
+}
 
-    // password length query, only accepts between 10 and 64 and integers
-    passwordLength = prompt("How many characters-long do you want your password to be?")
+if (upperCaseCharacters === true) {
+  allArrays = allArrays.concat(upperCasedCharacters);
+}
 
-  if (passwordLength < 10 || passwordLength > 64 || passwordLength % 1 !== 0) {
-    alert("You have to choose a number between 10 and 64. Please reload the page to start again.")
-    break;
-  };
+if (numberCharacters === true) {
+  allArrays = allArrays.concat(randomNumbers);
+}
+
+if (oddCharacters === true) {
+  allArrays = allArrays.concat(specialCharacters);
+}
 
 // randomizes the array
     randomArray = allArrays.sort(() => Math.random() - 0.5);
