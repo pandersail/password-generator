@@ -150,7 +150,6 @@ function getRandom(arr) {
                      randomNumbers = numericCharacters.sort(() => Math.random() - 0.5);
                      lowerCasedCharacters.sort(() => Math.random() - 0.5);
                      upperCasedCharacters.sort(() => Math.random() - 0.5);
-console.log(oddCharacters, numberCharacters, lowerCaseCharacters, upperCaseCharacters);
 
 // checking user's input if true will utilise the above math.random arrays + brings all arrays together in one array if true
 if (lowerCaseCharacters === true) {
