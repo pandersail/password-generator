@@ -113,7 +113,7 @@ function getPasswordOptions() {
 passwordLength = prompt("How many characters-long do you want your password to be?")
 
 if (passwordLength < 10 || passwordLength > 64 || passwordLength % 1 !== 0) {
-  alert("You have to choose a number between 10 and 64. Please reload the page to start again.")
+  alert("You have to choose a number between 10 and 64. Please try again.")
   break;
 };
 
@@ -131,7 +131,7 @@ if (passwordLength < 10 || passwordLength > 64 || passwordLength % 1 !== 0) {
       upperCaseCharacters === false &&
       numberCharacters === false &&
       oddCharacters === false) {
-        alert("You have to choose at least one type of character to make-up the password. Please reload the page to start again.")
+        alert("You have to choose at least one type of character to make-up the password. Please try again.")
         break;
       };
 // Non-accepted conditions for type of characters where it breaks to start again
