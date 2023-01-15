@@ -38,7 +38,7 @@ Visit the password generator repository [here.](https://github.com/pandersail/pa
 
 ## Importancy
 
-You can read on why it is critical to have string and safe passwords [here.](https://www.securedatarecovery.com/resources/the-importance-of-strong-secure-passwords)
+You can read on why it is critical to have strong and safe passwords [here.](https://www.securedatarecovery.com/resources/the-importance-of-strong-secure-passwords)
 
 
 
