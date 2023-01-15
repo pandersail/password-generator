@@ -69,7 +69,7 @@ A big thank you to Armando Osorio for helping me solve a bug where all the array
 
 ## Feedback
 
-If you have any feedback, please reach out to us at papayas-stamper-0z@icloud.com.
+If you have any feedback, please reach out to me at papayas-stamper-0z@icloud.com.
 
 
 
