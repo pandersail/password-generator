@@ -1,79 +1,75 @@
-# Module 5 Challenge: Password Generator
+# Password Generator
 
-## Overview
+This code defines four arrays of characters (special, numeric, lowercase, and uppercase) that can be included in a password. It then declares several variables, including flags for whether each character set should be included in the password, and a variable to store the desired password length. The code includes a function "getPasswordOptions" that prompts the user to input the desired password length and confirm whether they want to include each character set in their password. If the user inputs an invalid password length or chooses not to include any character sets, the code will break and display an alert asking the user to reload the page.
 
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
-
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
-
-## Instructions
-
-The following image shows the web application's appearance and functionality:
-
-![password generator demo](./assets/05-javascript-challenge-demo.png)
+The code also includes a function "getRandom" that takes an array as an input and returns a randomly selected element from that array. This function is intended to be used later in the code to randomly select characters from the character sets specified by the user to generate the password.
 
 
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
-      * At least 10 characters but no more than 64.
-    * Character types
-      * Lowercase
-      * Uppercase
-      * Numeric
-      * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
 
 
-## Review
+## Features
 
-You are required to submit the following for review:
+- It allows users to generate a strong and secure password by including a variety of character types (special characters, numeric characters, lowercase characters, and uppercase characters).
 
-* The URL of the deployed application.
+- It prompts the user to specify the desired length of their password, which can help ensure the password is long enough to be considered secure.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+- It allows the user to choose which types of characters they want to include in the password, which can help them create a password that is personalized to their preferences.
 
----
+- It includes validation to ensure that the user inputs a valid password length and that they choose at least one type of character to make-up the password.
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+- The code uses a function to randomly select characters from the specified character sets, which can help ensure that the generated passwords are truly random and therefore harder to guess.
+
+- It has an alert message to welcome the user and provide information about the application.
+
+- It makes it easy for the user to generate a password without any specific technical knowledge.
+
+
+
+## Application
+
+![deployed](./images/deployed.png)
+
+Visit the password generator [here.](https://pandersail.github.io/password-generator/) 
+
+Visit the password generator repository [here.](https://github.com/pandersail/password-generator)
+
+
+
+
+## Importancy
+
+You can read on why it is critical to have string and safe passwords [here.](https://www.securedatarecovery.com/resources/the-importance-of-strong-secure-passwords)
+
+
+
+
+## 🔗 Links
+[GitHub](https://github.com/pandersail)
+
+[linkedin](https://www.linkedin.com/in/angeloantosilva/)
+
+[twitter](https://twitter.com/pandersail)
+
+
+
+## Snippet
+![code](./images/carbon.png)
+
+
+
+## Acknowledgements
+
+A big thank you to Armando Osorio for helping me solve a bug where all the arrays would alwyas be taken into account despite user's input.
+
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at papayas-stamper-0z@icloud.com.
+
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+

@@ -96,9 +96,7 @@ let oddCharacters = false
 let passwordLength = 0
 let randomArray = []
 let randomNumbers = []
-
 let randomPassword = []
-let numbers = {};
 
 
 
