@@ -27,6 +27,10 @@ The code also includes a function "getRandom" that takes an array as an input an
 
 ## Application
 
+Mobile
+![deployed](./images/mobile.jpeg)
+
+Desktop
 ![deployed](./images/deployed.png)
 
 Visit the password generator [here.](https://pandersail.github.io/password-generator/) 
